@@ -12,8 +12,6 @@ while ($line=next($input)) {
   if ($x1 == $x2 or $y1 == $y2) {
     if ($x2 < $x1) [$x1, $x2] = [$x2, $x1];
     if ($y2 < $y1) [$y1, $y2] = [$y2, $y1];
-    $x2max = max($x1, $x2, $x2max);
-    $y2max = max($y1, $y2, $y2max);
     for ($x=$x1; $x<=$x2; $x++)
       for ($y=$y1; $y<=$y2; $y++)
         $diagram[$x][$y] = empty($diagram[$x][$y]) ? 1: 2;
